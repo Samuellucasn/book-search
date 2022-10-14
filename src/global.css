@@ -1,0 +1,17 @@
+#root {
+    width: 100vw;
+    height: 100vh;
+}
+:root {
+    --font: font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+    --font-color: white;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: var(--font);
+}

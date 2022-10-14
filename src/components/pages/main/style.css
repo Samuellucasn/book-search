@@ -1,0 +1,29 @@
+main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    background-image: url(/src/assets/library-image.jpg);
+    background-size: cover;
+
+    height: 100%;
+}
+
+.title_div {
+    color: var(--font-color);
+    font-size: 2em;
+
+    width: 600px;
+    margin-left: 50px;
+}
+
+
+.title_div h1 {
+    line-height: 10px;
+    font-size: 3em;
+}
+
+.search_div {
+    margin-right: 100px;
+}

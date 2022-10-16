@@ -1,8 +1,13 @@
 import React from 'react'
+import './style.css'
 
-function Button() {
+interface props {
+    children?: React.ReactNode
+}
+
+const Button : React.FC<props> = ({children}) => {
     return (
-        <button></button>
+        <button>{children}</button>
     )
 }
 

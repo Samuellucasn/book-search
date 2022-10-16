@@ -10,14 +10,12 @@ main {
     height: 100%;
 }
 
-.title_div {
+.title_div, .search_div {
+    width: 600px;
+    margin-left: 3rem;
     color: var(--font-color);
     font-size: 2em;
-
-    width: 600px;
-    margin-left: 50px;
 }
-
 
 .title_div h1 {
     line-height: 10px;
@@ -25,5 +23,7 @@ main {
 }
 
 .search_div {
-    margin-right: 100px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }

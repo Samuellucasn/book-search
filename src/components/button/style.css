@@ -1,0 +1,14 @@
+button {
+    min-width: 2em;
+    min-height: 2em;
+    border-style: none;
+    cursor: pointer;
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+}
+
+button:hover {
+    background-color: #e5e4e4;
+}

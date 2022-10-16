@@ -4,7 +4,7 @@ import './style.css'
 interface props {
     type: string
     placeholder: string
-    value: string
+    value?: string
 }
 
 const Input : React.FC<props> = ({type, placeholder, value }) => {

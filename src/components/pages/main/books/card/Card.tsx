@@ -1,15 +1,16 @@
 import React from 'react'
 
 interface props {
-    image?: string,
-    title?: string
+    image: any
+    title: string
 }
 
 const Card: React.FC<props> = ({image, title}) => {
+
     return (
         <div className='card_div'>
             <img src="" alt="" />
-            <h1>title</h1>
+            <h1>{title}</h1>
         </div>
     )
 }

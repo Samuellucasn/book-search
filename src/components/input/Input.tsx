@@ -4,12 +4,12 @@ import './style.css'
 interface props {
     type: string
     placeholder: string
-    value?: string
+    onKeyDown: (e: any) => void
 }
 
-const Input : React.FC<props> = ({type, placeholder, value }) => {
+const Input : React.FC<props> = ({type, placeholder, onKeyDown }) => {
     return (
-        <input type={type} placeholder={placeholder} value={value}/>
+        <input type={type} placeholder={placeholder} onKeyDown={(e) => onKeyDown(e)}/>
     )
 }
 export default Input

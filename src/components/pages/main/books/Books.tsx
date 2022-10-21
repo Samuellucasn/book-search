@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
+import '.env'
 import './style.css'
 
 import { FaRegTimesCircle } from "react-icons/fa";
@@ -15,7 +16,7 @@ const Books : React.FC<props> = ({searchValue}) => {
     const [card, setCard] = useState<any>([])
 
     useEffect(() => {
-        axios.get('https://www.googleapis.com/books/v1/volumes?q='+ searchValue +'&key=AIzaSyCdFlyBE6_svB7UDH7wPnO_3flNUq_mW0U')
+        axios.get('https://www.googleapis.com/books/v1/volumes?q='+ searchValue +'&key=' + process.env.book_search_API)
 
         .then(res => {
             setCard(res.data.items)

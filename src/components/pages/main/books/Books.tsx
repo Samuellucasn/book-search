@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
-import '.env'
 import './style.css'
 
 import { FaRegTimesCircle } from "react-icons/fa";
@@ -14,9 +13,10 @@ interface props {
 
 const Books : React.FC<props> = ({searchValue}) => {
     const [card, setCard] = useState<any>([])
-
+    const [renderAbout, setRenderAbout] = useState(false)
+    
     useEffect(() => {
-        axios.get('https://www.googleapis.com/books/v1/volumes?q='+ searchValue +'&key=' + process.env.book_search_API)
+        axios.get('https://www.googleapis.com/books/v1/volumes?q='+ searchValue +'&key=' + process.env.REACT_APP_BOOK_GOOGLE_API + '&maxResults=40')
 
         .then(res => {
             setCard(res.data.items)
@@ -28,18 +28,18 @@ const Books : React.FC<props> = ({searchValue}) => {
 
     return (
         <div className='books_div'>
-            <p>{searchValue}</p>
             <div className='top_book_div'>
-                <img src="/src/assets/Book-Cat.jfif" />
+                <img src="/src/assets/library-image.jpg" alt='library'/>
                 <Button><FaRegTimesCircle></FaRegTimesCircle></Button>
             </div>
             {
                 card.map((value: any) => {
-                    const image = value.volumeInfo.imageLinks.smallThumbnail
+                    const image = value.volumeInfo.imageLinks && value.volumeInfo.imageLinks.thumbnail
                     const title = value.volumeInfo.title
 
                     return (
-                        <Card image={image} title={title}></Card>
+                        <Card image={image} title={title}
+                        key={value.id} ></Card>
                     )
                 })
             }

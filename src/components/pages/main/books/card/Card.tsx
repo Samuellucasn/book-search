@@ -1,4 +1,5 @@
 import React from 'react'
+import './style.css'
 
 interface props {
     image: any
@@ -9,7 +10,7 @@ const Card: React.FC<props> = ({image, title}) => {
 
     return (
         <div className='card_div'>
-            <img src="" alt="" />
+            <img src={image} />
             <h1>{title}</h1>
         </div>
     )

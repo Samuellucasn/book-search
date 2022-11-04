@@ -31,18 +31,19 @@ const Books : React.FC<props> = ({searchValue}) => {
     return (
         <div className='books_div'>
             <div className='top_book_div'>
-                <img src="/src/assets/library-image.jpg" alt='library'/>
-                <Button><FaRegTimesCircle></FaRegTimesCircle></Button>
+                <Button onClick={() => setRenderAbout(false)}><FaRegTimesCircle></FaRegTimesCircle></Button>
             </div>
             { !renderAbout &&
                 card.map((value: any) => {
                     const image = value.volumeInfo.imageLinks && value.volumeInfo.imageLinks.thumbnail
                     const title = value.volumeInfo.title
 
-                    return (
-                        <Card image={image} title={title}
-                        key={value.id} onClick={() => {setItem(value); setRenderAbout(true)}} ></Card>
-                    )
+                    if (image !== undefined) {
+                        return (
+                            <Card image={image} title={title}
+                            key={value.id} onClick={() => {setItem(value); setRenderAbout(true)}} ></Card>
+                        )
+                    }
                 })
             }
             { renderAbout &&

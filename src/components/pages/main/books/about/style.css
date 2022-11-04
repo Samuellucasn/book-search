@@ -10,6 +10,8 @@
 }
 
 .header_about_div img {
+    width: 300px;
+    height: 400px;
 }
 
 .container {
@@ -27,5 +29,4 @@
 }
 
 .description_div {
-    background-color: gray;
 }

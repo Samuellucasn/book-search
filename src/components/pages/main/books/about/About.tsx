@@ -15,7 +15,7 @@ const About: React.FC<props> = ({item}) => {
     return (
         <div className='about_div'>
             <div className='header_about_div'>
-                <img src={image} alt="capa do livro" />
+                <img src={image.replace('zoom=1', 'zoom=3').replace('http', 'https')}/>
                 <div className='container'>
                     <h1>{title}</h1>
                     <p>{subtitle}</p>

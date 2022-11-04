@@ -8,6 +8,7 @@ interface props {
 }
 
 const Card: React.FC<props> = ({image, title, onClick}) => {
+    title = title.charAt(0) + title.substring(1).toLowerCase()
 
     return (
         <div className='card_div' onClick={onClick}>

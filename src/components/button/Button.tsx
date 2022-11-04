@@ -3,11 +3,12 @@ import './style.css'
 
 interface props {
     children?: React.ReactNode
+    onClick: (e: any) => void
 }
 
-const Button : React.FC<props> = ({children}) => {
+const Button : React.FC<props> = ({children, onClick}) => {
     return (
-        <button>{children}</button>
+        <button onClick={(e) => onClick(e)}>{children}</button>
     )
 }
 

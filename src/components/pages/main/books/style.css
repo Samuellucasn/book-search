@@ -1,5 +1,6 @@
 .books_div {
-    background-color: white;
+    background-image: url(/src/assets/textura-de-papel-amarrotada-branca-para-o-fundo.webp);
+    background-size: cover;
     box-shadow: 0px 1px 9px 0px black;
     height: 90%;
     width: 50%;
@@ -9,6 +10,8 @@
     justify-content: center;
     gap: 20px;
     overflow-y: scroll;
+
+    animation: open .5s normal;
 
     margin-right: 20px;
 }
@@ -32,8 +35,18 @@
 
     position: sticky;
     top: 0;
-    z-index: 2;
 
     padding: 10px;
-    background-color: white;
+}
+
+@keyframes open {
+    0% {
+        transform: scale(0.1);
+        transition-delay: 1s;
+        border-radius: 100%;
+    }
+    100% {
+        transform: scale(1);
+        border-radius: 0%;
+    }
 }

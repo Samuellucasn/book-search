@@ -22,7 +22,7 @@ const Books : React.FC<props> = ({searchValue}) => {
 
         .then(res => {
             setCard(res.data.items)
-            console.log(res.data.items)
+            setRenderAbout(false)
         })
         .catch(erro => console.log(erro))
     }, [searchValue])

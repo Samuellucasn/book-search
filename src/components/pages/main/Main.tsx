@@ -9,6 +9,7 @@ import Books from './books/Books'
 
 function Main() {
     const [inputValue, setInputValue] = useState("")
+    const [clickValue, setClickValue] = useState("")
     const [renderBooks, setRenderBooks] = useState(false)
 
     const handleEnter = (e: any) => {
@@ -18,7 +19,9 @@ function Main() {
         }
     }
 
-    const handleClick = (e: any) => {
+    const handleClick = () => {
+        setInputValue(clickValue)
+        setRenderBooks(true)
     }
 
     return (
@@ -32,7 +35,9 @@ function Main() {
                 <Input 
                 type={"text"} 
                 placeholder={"search here"}
-                onKeyDown={handleEnter}></Input>
+                onKeyDown={handleEnter}
+                onChange={(e: any) => setClickValue(e.target.value)}
+                ></Input>
                 <Button onClick={handleClick} ><FaSistrix></FaSistrix></Button>
             </div> 
             </div>{

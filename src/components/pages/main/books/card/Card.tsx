@@ -12,7 +12,7 @@ const Card: React.FC<props> = ({image, title, onClick}) => {
 
     return (
         <div className='card_div' onClick={onClick}>
-            <img src={image} />
+            <img src={image} alt="capa do livro"/>
             <h1>{title}</h1>
         </div>
     )

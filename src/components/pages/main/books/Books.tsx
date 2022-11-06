@@ -15,6 +15,7 @@ interface props {
 const Books : React.FC<props> = ({searchValue}) => {
     const [card, setCard] = useState<any>([])
     const [renderAbout, setRenderAbout] = useState(false)
+    const [renderErro, setRenderErro] = useState(false)
     const [item, setItem] = useState({})
     
     useEffect(() => {
@@ -24,7 +25,9 @@ const Books : React.FC<props> = ({searchValue}) => {
             setCard(res.data.items)
             setRenderAbout(false)
         })
-        .catch(erro => console.log(erro))
+        .catch(() => {
+            setRenderErro(true)
+        })
     }, [searchValue])
 
 
@@ -33,7 +36,12 @@ const Books : React.FC<props> = ({searchValue}) => {
             <div className='top_book_div'>{ renderAbout && 
                 <Button onClick={() => setRenderAbout(false)}><FaRegTimesCircle></FaRegTimesCircle></Button>}
             </div>
-            { !renderAbout &&
+            { renderErro && (
+                <div>
+                    <p>Deu erro</p>
+                </div>
+            )}
+            { !renderAbout && !renderErro &&
                 card.map((value: any) => {
                     const image = value.volumeInfo.imageLinks && value.volumeInfo.imageLinks.thumbnail
                     const title = value.volumeInfo.title

@@ -12,8 +12,8 @@ main {
 
 .title_div, .search_div {
     width: 600px;
-    margin-left: 3rem;
-    color: var(--font-color);
+    margin-left: 3rem; 
+    color: white;
     font-size: 2em;
 }
 

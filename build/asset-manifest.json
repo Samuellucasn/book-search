@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.071e0ee2.css",
+    "main.js": "/static/js/main.d4abb60b.js",
+    "static/js/787.26ac994f.chunk.js": "/static/js/787.26ac994f.chunk.js",
+    "static/media/library-image.jpg": "/static/media/library-image.0ff47c6dfc2a5e3f65af.jpg",
+    "static/media/textura-de-papel-amarrotada-branca-para-o-fundo.webp": "/static/media/textura-de-papel-amarrotada-branca-para-o-fundo.115b1105875abe840082.webp",
+    "index.html": "/index.html",
+    "main.071e0ee2.css.map": "/static/css/main.071e0ee2.css.map",
+    "main.d4abb60b.js.map": "/static/js/main.d4abb60b.js.map",
+    "787.26ac994f.chunk.js.map": "/static/js/787.26ac994f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.071e0ee2.css",
+    "static/js/main.d4abb60b.js"
+  ]
+}

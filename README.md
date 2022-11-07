@@ -3,7 +3,7 @@ Site de pesquisa
 
 ## Features
 - [x] Pesquisa de livros
-- [ ] Descrição detalhada de cada livro
+- [x] Descrição detalhada de cada livro
 - [ ] Responsividade   
 
 ## Tecnologias:
@@ -18,10 +18,10 @@ Site de pesquisa
 ```bash
 
 # Clone este repositório
-$ git clone <>
+$ git clone <https://github.com/Samuellucasn/book-search>
 
 # Acesse a pasta do projeto no terminal/cmd
-$ cd 
+$ cd search-book
 
 # Vá para a pasta server
 $ cd server

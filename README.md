@@ -1,5 +1,7 @@
 # book search
-Site de pesquisa 
+Site de pesquisa de livros usando Google API
+
+link do projeto aqui: https://636c3fd1fe93f90a6ff70890--book-search-a2bc3f.netlify.app/
 
 ## Features
 - [x] Pesquisa de livros

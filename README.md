@@ -6,7 +6,7 @@ link do projeto aqui: https://636c3fd1fe93f90a6ff70890--book-search-a2bc3f.netli
 ## Features
 - [x] Pesquisa de livros
 - [x] Descrição detalhada de cada livro
-- [ ] Responsividade   
+- [x] Responsividade   
 
 ## Tecnologias:
 - React

@@ -3,3 +3,9 @@ input {
     padding: 5px;
     border-style: none;
 }
+
+@media (max-width: 500px) {
+    input {
+        width: 270px;
+    }
+}

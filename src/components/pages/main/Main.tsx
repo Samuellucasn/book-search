@@ -40,7 +40,8 @@ function Main() {
                 ></Input>
                 <Button onClick={handleClick} ><FaSistrix></FaSistrix></Button>
             </div> 
-            </div>{
+            </div>
+            {
                 renderBooks && 
                 <Books searchValue={inputValue}></Books>
             }

@@ -24,8 +24,8 @@ const About: React.FC<props> = ({item}) => {
                     <h1>{title}</h1>
                     <p>{subtitle}</p>
                     <p><span>Language: </span>{language.toLowerCase()}</p>
-                    <p><span>Authors: </span> {authors === undefined? '' : authors.map((v:any) => {return v})}</p>
-                    <p><span>Categories: </span> {categories === undefined? '' : categories.map((v:any) => {return v})}</p>
+                    <p><span>Authors: </span> {authors === undefined? '' : authors.map((v:any) => {return v + ". "})}</p>
+                    <p><span>Categories: </span> {categories === undefined? '' : categories.map((v:any) => {return v + " "})}</p>
                     <p><span>Published Date: </span> {publishedDate}</p>
                     <p><span>Publisher: </span> {publisher}</p>
                 </div>

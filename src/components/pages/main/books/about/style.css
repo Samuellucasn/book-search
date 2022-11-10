@@ -30,3 +30,25 @@
 span {
     font-weight: bold;
 }
+
+@media (max-width: 1420px) {
+    .about_div {
+        width: fit-content;
+        margin: 0;
+    }
+
+    .description_div {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 670px) {
+    .header_about_div img {
+        max-width: 10em;
+        max-height: 15em;
+    }
+
+    .header_about_div {
+        flex-wrap: wrap;
+    }
+}

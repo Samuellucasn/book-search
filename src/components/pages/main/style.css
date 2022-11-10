@@ -4,26 +4,41 @@ main {
     justify-content: space-between;
     align-items: center;
 
-    background-image: url(/src/assets/library-image.jpg);
+    background-image: url(../../../assets/library-image.jpg);
     background-size: cover;
 
     height: 100%;
 }
 
 .title_div, .search_div {
-    width: 600px;
+    max-width: 600px;
     margin-left: 3rem; 
     color: white;
     font-size: 2em;
 }
 
 .title_div h1 {
-    line-height: 10px;
     font-size: 3em;
+    margin: 0;
 }
 
 .search_div {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+@media (max-width: 1420px) {
+    main {
+        justify-content: center;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 500px) {
+    .title_div, .search_div {
+        margin-left: 1rem;
+        font-size: 1.5em;
+        padding: 10px;
+    }
 }

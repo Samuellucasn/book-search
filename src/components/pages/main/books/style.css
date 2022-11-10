@@ -1,9 +1,9 @@
 .books_div {
-    background-image: url(/src/assets/textura-de-papel-amarrotada-branca-para-o-fundo.webp);
+    background-image: url(../../../../assets/textura-de-papel-amarrotada-branca-para-o-fundo.webp);
     background-size: cover;
     box-shadow: 0px 1px 9px 0px black;
-    height: 90%;
-    width: 50%;
+    height: 700px;
+    width: 750px;
 
     display: flex;
     flex-flow: row wrap;
@@ -48,5 +48,13 @@
     100% {
         transform: scale(1);
         border-radius: 0%;
+    }
+}
+
+@media (max-width: 1420px) {
+    .books_div {
+        width: fit-content;
+        margin: 0;
+        animation: none;
     }
 }
